@@ -1,0 +1,13 @@
+# serverless.yml
+component: scf
+name: python-pycryptodome-test
+
+inputs:
+  src: .
+  handler: index.main_handler
+  runtime: Python3.6
+  region: ap-guangzhou
+
+  layers: #layer配置
+    - name: python-pycryptodome #  layer名称
+      version: 1 #  版本
