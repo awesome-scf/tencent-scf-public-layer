@@ -1,14 +1,17 @@
-# serverless.yml
-component: layer
-name: python-pycryptodome
-org: org
-app: app
-stage: dev
-
-inputs:
-  region: ap-guangzhou
-  name: python-pycryptodome
-  src: ./src
-  runtimes:
-    - Python3.6
-    - Python2.7
+name: scf-pycryptodome-layer # 项目模板的名字 
+displayName:  快速创建云函数 pycryptodome 依赖层 # 项目模板展示在控制台的名称（中文）
+author: Tencent Cloud, Inc. # 作者的名字
+org: Tencent Cloud, Inc. # 组织名称，可选
+description:  Create a pycryptodome layer in SCF  # 英文描述
+description-i18n:
+  zh-cn: 此项目提供在腾讯云 SCF 中创建 pycryptodome 层 # 中文描述
+type: template #类型：模版
+keywords: tencent, scf, layer, pycryptodome # 关键字
+repo: https://github.com/awesome-scf/tencent-scf-public-layer/tree/master/python-pycryptodome # 源代码
+readme: https://github.com/awesome-scf/tencent-scf-public-layer/blob/master/python-pycryptodome/readme.md # 详细的说明文件
+license: MIT # 版权声明
+src: # 描述项目中的哪些文件需要作为模板发布
+  src: ./ # 指定具体的相对目录，此目录下的文件将作为模板发布
+  exclude: 
+     - .env
+     - serverless.yml
