@@ -1,0 +1,14 @@
+# serverless.yml
+component: layer
+name: python-pycryptodome
+org: org
+app: app
+stage: dev
+
+inputs:
+  region: ap-guangzhou
+  name: python-pycryptodome
+  src: ../src
+  runtimes:
+    - Python3.6
+    - Python2.7
